@@ -1,0 +1,59 @@
+.circle {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border-radius: 100vmax;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	position: absolute;
+	width: 140px;
+	height: 140px;
+	background-size: cover;
+	border-radius: 100vmax;
+	background-position: center;
+    transition: background-color 0.3s ease;
+}
+.logo:hover{
+    background-color: red;
+}
+
+.text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-family: consolas;
+	font-size: 20px;
+	animation: textRotation 8s linear infinite;
+}
+
+@keyframes textRotation {
+    0% {
+        transform: rotate(0deg);
+        color: #ff5e62; 
+    }
+    25% {
+        color: #ffa947; 
+    }
+    50% {
+        color: #58dcff;
+    }
+    75% {
+        color: #6a3ab2; 
+    }
+    100% {
+        transform: rotate(360deg);
+        color: #ff8a65; 
+    }
+}
+
+.text span {
+	position: absolute;
+	left: 50%;
+	font-size: 1.2em;
+	transform-origin: 0 100px;
+}
+

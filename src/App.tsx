@@ -3,7 +3,10 @@ import './App.css'
 import NodeJS from "./assets/node-js-2.png"
 import GitLogo from "./assets/icons8-git-48.png"
 import JoMoscow from "./assets/PXL_20220330_092544474_Original.jpeg"
-import ProgIMG from "./assets/louis-charavner-programming.jpg"
+import RotatingText from './RotatingText';
+import GitHUb from './assets/github-mark/github-mark.svg'
+// import ProgIMG from "./assets/louis-charavner-programming.jpg"
+
 
 const App: React.FC = () => {
 
@@ -247,7 +250,7 @@ const App: React.FC = () => {
             </h1>
           </div>
           <div className="all-projects">
-            <div className="project-item">
+            {/* <div className="project-item">
               <div className="project-info">
                 <a href="https://github.com/Jojo10x" target="blank">
                   <h1 className="section-title ">Available Here</h1>
@@ -257,8 +260,10 @@ const App: React.FC = () => {
               <div className="project-img">
                 <img src={ProgIMG} alt="img" />
               </div>
-            </div>
+            </div> */}
+            
           </div>
+          <RotatingText text="•GitHub Link •Click Here •Jojo10x" imageUrl={GitHUb}  />
         </div>
       </section>
 
