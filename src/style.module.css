@@ -7,6 +7,10 @@
 	align-items: center;
 	justify-content: center;
 }
+.circle:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 0px 18px 0 #0000002c;
+}
 
 .logo {
 	position: absolute;
@@ -16,9 +20,6 @@
 	border-radius: 100vmax;
 	background-position: center;
     transition: background-color 0.3s ease;
-}
-.logo:hover{
-    background-color: red;
 }
 
 .text {
@@ -49,6 +50,7 @@
         color: #ff8a65; 
     }
 }
+
 
 .text span {
 	position: absolute;
