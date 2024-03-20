@@ -5,6 +5,7 @@ import GitLogo from "./assets/icons8-git-48.png"
 import JoMoscow from "./assets/PXL_20220330_092544474_Original.jpeg"
 import RotatingText from './RotatingText';
 import GitHUb from './assets/github-mark/github-mark.svg'
+import ToggleButton from './ToggleButton';
 // import ProgIMG from "./assets/louis-charavner-programming.jpg"
 
 
@@ -104,6 +105,10 @@ const App: React.FC = () => {
                   <span>J</span>oel <span>K</span>asisi
                 </h1>
               </a>
+            </div>
+            <div className='btn_container'>
+             <ToggleButton/>
+
             </div>
             <div className="nav-list">
               <div className="hamburger">
