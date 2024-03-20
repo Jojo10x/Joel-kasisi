@@ -2,6 +2,9 @@ import React, {  useState,useEffect } from 'react';
 import './App.css'
 import NodeJS from "./assets/node-js-2.png"
 import GitLogo from "./assets/icons8-git-48.png"
+import Telegram from "./assets/icons8-telegram-app-48.png"
+import Linkedin from "./assets/icons8-linkedin-48.png"
+import Insta from "./assets/icons8-instagram-48.png"
 import JoMoscow from "./assets/PXL_20220330_092544474_Original.jpeg"
 import RotatingText from './RotatingText';
 import GitHUb from './assets/github-mark/github-mark.svg'
@@ -353,7 +356,7 @@ const App: React.FC = () => {
           <h2></h2>
           <div className="social-icon">
             <div className="social-item">
-              <a href="https://vk.com/joeycutee" target="blank">
+              <a href="https://vk.com/joeyzaaki" target="blank">
                 <img
                   src="https://img.icons8.com/color/452/vk-circled.png"
                   alt="VK"
@@ -363,16 +366,8 @@ const App: React.FC = () => {
             <div className="social-item">
               <a href="https://www.instagram.com/joeyzak_/" target="blank">
                 <img
-                  src="https://img.icons8.com/bubbles/100/000000/instagram-new.png"
+                  src={Insta}
                   alt="Instagram"
-                />
-              </a>
-            </div>
-            <div className="social-item">
-              <a href="https://github.com/Jojo10x" target="blank">
-                <img
-                  src="https://img.icons8.com/ios-filled/344/github.png"
-                  alt="GitHub"
                 />
               </a>
             </div>
@@ -382,8 +377,18 @@ const App: React.FC = () => {
                 target="blank"
               >
                 <img
-                  src="https://img.icons8.com/ios-glyphs/344/linkedin-circled--v1.png"
+                  src={Linkedin}
                   alt="LinkedIn"
+                />
+              </a>
+            </div>
+            <div className="social-item">
+              <a
+                href="https://t.me/Joeyzaaki"
+              >
+                <img
+                  src={Telegram}
+                  alt="Telegram"
                 />
               </a>
             </div>
