@@ -1004,9 +1004,9 @@ body {
   box-shadow: 0px 0px 18px 0 #ffffff2c !important;
 
 }
-/* .dark-mode .footer img {
+.dark-mode .contact-item img {
   filter: invert(100%) !important;
-} */
+}
 .dark-mode .contact-item{
   box-shadow: 0px 0px 18px 0 #7e7d7d2c !important;
   transition: 0.3s ease box-shadow !important;

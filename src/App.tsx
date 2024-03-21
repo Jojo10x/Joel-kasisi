@@ -257,18 +257,6 @@ const App: React.FC = () => {
             </h1>
           </div>
           <div className="all-projects">
-            {/* <div className="project-item">
-              <div className="project-info">
-                <a href="https://github.com/Jojo10x" target="blank">
-                  <h1 className="section-title ">Available Here</h1>
-          
-                </a>
-              </div>
-              <div className="project-img">
-                <img src={ProgIMG} alt="img" />
-              </div>
-            </div> */}
-            
           </div>
           <RotatingText text="•GitHub Link •Click Here •Jojo10x" imageUrl={GitHUb}  />
         </div>
