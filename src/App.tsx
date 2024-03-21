@@ -7,7 +7,6 @@ import Linkedin from "./assets/icons8-linkedin-48.png"
 import Insta from "./assets/icons8-instagram-48.png"
 import JoMoscow from "./assets/PXL_20220330_092544474_Original.jpeg"
 import RotatingText from './RotatingText';
-import GitHUb from './assets/github-mark/github-mark.svg'
 import ToggleButton from './ToggleButton';
 
 
@@ -258,7 +257,7 @@ const App: React.FC = () => {
           </div>
           <div className="all-projects">
           </div>
-          <RotatingText text="•GitHub Link •Click Here •Jojo10x" imageUrl={GitHUb}  />
+          <RotatingText text="•GitHub Link •Click Here •Jojo10x"  />
         </div>
       </section>
 
