@@ -1,0 +1,162 @@
+
+$animation-delay-base: 1000ms;
+$animation-delay-step: 1000ms;
+
+.sky {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform: rotateZ(45deg);
+}
+
+.star {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+  width: 20px;
+	height: 2px;
+	border-radius: 885px;
+	background: linear-gradient(-45deg,
+			#eef0f5, rgba(0, 0, 255, 0));
+	filter: drop-shadow(0 0 6px #d7dff0);
+	animation: tail 3000ms ease-in-out infinite,
+		shooting 3000ms ease-in-out infinite;
+}
+
+.star::before,
+.star::after {
+	content: "";
+	position: absolute;
+	top: calc(50% - 1px);
+	right: 0;
+	height: 2px;
+	background: linear-gradient(-45deg,
+			rgba(0, 0, 255, 0),
+			#eaeef8,
+			rgba(0, 0, 255, 0));
+	transform: translateX(50%) rotateZ(45deg);
+	border-radius: 100%;
+	animation: shining 3000ms ease-in-out infinite;
+}
+
+.star::after {
+	-webkit-transform: translateX(50%) rotateZ(-45deg);
+	transform: translateX(50%) rotateZ(-45deg);
+}
+@mixin star-properties($index, $top, $left, $animation-delay) {
+  .star:nth-child(#{$index}) {
+    top: $top;
+    left: $left;
+    animation-delay: $animation-delay;
+    
+    &::before,
+    &::after {
+      animation-delay: $animation-delay;
+    }
+  }
+}
+
+@for $i from 1 through 11 {
+  $top: 0;
+  $left: 0;
+  $delay: 0;
+  
+  @if $i == 1 {
+    $top: calc(50% - -419px);
+    $left: calc(50% - 400px);
+    $delay: $animation-delay-base + ($animation-delay-step * 1);
+  }
+  @else if $i == 2 {
+    $top: calc(50% - -343px);
+    $left: calc(50% - 337px);
+    $delay: $animation-delay-base + ($animation-delay-step * 2);
+  }
+  @else if $i == 3 {
+    $top: calc(50% - -540px);
+    $left: calc(50% - 422px);
+    $delay: $animation-delay-base + ($animation-delay-step * 3);
+  }
+  @else if $i == 4 {
+    $top: calc(50% - -129px);
+    $left: calc(50% - 113px);
+    $delay: $animation-delay-base + ($animation-delay-step * 4);
+  }
+  @else if $i == 5 {
+    $top: calc(50% - 146px);
+    $left: calc(50% - 112px);
+    $delay: $animation-delay-base + ($animation-delay-step * 5);
+  }
+  @else if $i == 6 {
+    $top: calc(50% - -108px);
+    $left: calc(50% - 160px);
+    $delay: $animation-delay-base + ($animation-delay-step * 6);
+  }
+  @else if $i == 7 {
+    $top: calc(50% - 232px);
+    $left: calc(50% - 432px);
+    $delay: $animation-delay-base + ($animation-delay-step * 7);
+  }
+  @else if $i == 8 {
+    $top: calc(50% - 219px);
+    $left: calc(50% - -210px);
+    $delay: $animation-delay-base + ($animation-delay-step * 8);
+  }
+  @else if $i == 9 {
+    $top: calc(50% - 319px);
+    $left: calc(50% - -300px);
+    $delay: $animation-delay-base + ($animation-delay-step * 9);
+  }
+  @else if $i == 10 {
+    $top: calc(50% - 419px);
+    $left: calc(50% - -400px);
+    $delay: $animation-delay-base + ($animation-delay-step * 1);
+  }
+  @else if $i == 11 {
+    $top: calc(50% - 343px);
+    $left: calc(50% - -337px);
+    $delay: $animation-delay-base + ($animation-delay-step * 2);
+  }
+  
+
+  @include star-properties(#{$i}, $top, $left, $delay);
+}
+
+
+@keyframes tail {
+	0% {
+		width: 0;
+	}
+
+	30% {
+		width: 100px;
+	}
+
+	100% {
+		width: 0;
+	}
+}
+
+
+@keyframes shining {
+	0% {
+		width: 0;
+	}
+
+	50% {
+		width: 30px;
+	}
+
+	100% {
+		width: 0;
+	}
+}
+
+@keyframes shooting {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(270px);
+	}
+}

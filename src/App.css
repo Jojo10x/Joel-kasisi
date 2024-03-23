@@ -881,12 +881,6 @@ height: 100%;
   transform: translateX(0);
 }
 
-@media(prefers-reduced-motion){
-  .hidden{
-    transition: none;
-  }
-}
-
 .logo:nth-child(2){
   transition-delay: 200ms;
 
