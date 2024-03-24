@@ -8,6 +8,7 @@ import Insta from "./assets/icons8-instagram-48.png"
 import JoMoscow from "./assets/PXL_20220330_092544474_Original.jpeg"
 import RotatingText from './RotatingText';
 import ToggleButton from './ToggleButton';
+import ShootingStarAnimation from './ShootingStarAnimation';
 
 
 const App: React.FC = () => {
@@ -335,6 +336,7 @@ const App: React.FC = () => {
 
       <footer id="footer">
         <div className="footer container">
+        <ShootingStarAnimation />
           <div className="brand">
             <h1>
               <span>J</span>oel <span>K</span>asisi
