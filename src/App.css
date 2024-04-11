@@ -1030,3 +1030,84 @@ body {
 .dark-mode #hero h1{
    color: white !important;
 }
+
+
+/* progress circle */
+
+.progress-circle-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .progress-circle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .progress-circle-bar {
+    fill: none;
+    stroke: rgb(41, 50, 60);
+    stroke-width: 5;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    transition: stroke-dashoffset 0.3s ease;
+  }
+  
+  .progress-background {
+    fill: transparent;
+    /* stroke: #ededed; */
+    stroke-width: 5;
+    stroke-dasharray: none;
+  }
+ 
+  
+  .scroll-to-top {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    box-shadow: 0px 0px 18px 0 whitesmoke ;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+  .scroll-to-top:hover{
+    transform: scale(1.2);
+  }
+  
+  .scroll-to-top svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    stroke: white;
+    transition: all 0.1s ease;
+    
+  }
+
+  .arrowline {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;  
+    animation-delay: 0s;
+    animation: dash 3s ease-in-out forwards infinite;
+  }
+  @keyframes dash { 
+    0%
+    {
+      stroke-dashoffset: 100;
+      opacity: 0;
+    }
+    50% {
+      stroke-dashoffset: 150;
+      opacity: 1;
+  }}

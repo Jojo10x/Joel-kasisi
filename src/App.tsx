@@ -9,6 +9,7 @@ import JoMoscow from "./assets/PXL_20220330_092544474_Original.jpeg"
 import RotatingText from './RotatingText';
 import ToggleButton from './ToggleButton';
 import ShootingStarAnimation from './ShootingStarAnimation';
+import ScrollToTop from './ScrollToTop';
 
 
 const App: React.FC = () => {
@@ -146,6 +147,7 @@ const App: React.FC = () => {
             </div>
           </div>
         </div>
+        <ScrollToTop/>
       </header>
 
       <section id="hero">
