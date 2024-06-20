@@ -1085,6 +1085,21 @@ body {
   .scroll-to-top:hover{
     transform: scale(1.2);
   }
+  .scroll-to-top:hover .arrowline {
+    animation: none;
+  }
+  .scroll-to-top:hover .arrowline {
+    animation: moveUpDown 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-15px);
+    }
+  }
   
   .scroll-to-top svg {
     display: block;
@@ -1092,22 +1107,27 @@ body {
     height: 20px;
     stroke: white;
     transition: all 0.1s ease;
-    
+
   }
 
   .arrowline {
-    stroke-dasharray: 50;
-    stroke-dashoffset: 50;  
-    animation-delay: 0s;
-    animation: dash 3s ease-in-out forwards infinite;
+    transform-origin: center;
+    animation: rotateHalfClockwise 4s ease-in-out infinite;
   }
-  @keyframes dash { 
-    0%
-    {
-      stroke-dashoffset: 100;
-      opacity: 0;
+  
+  @keyframes rotateHalfClockwise {
+    0% {
+      transform: rotate(-90deg);
     }
     50% {
-      stroke-dashoffset: 150;
-      opacity: 1;
-  }}
+      transform: rotate(90deg);
+    }
+    100% {
+      transform: rotate(-90deg);
+    }
+  }
+  
+  
+  
+  
+  
