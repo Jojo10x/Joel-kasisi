@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react';
-import './style.scss'; 
+import '../style.scss'; 
 
 interface ShootingStarProps {
   className?: string;
