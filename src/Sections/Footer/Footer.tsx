@@ -1,4 +1,4 @@
-import ShootingStarAnimation from "../../Components/ShootingStarAnimation";
+import ShootingStarAnimation from "../../components/ShootingStarAnimation";
 import Telegram from "../../assets/icons8-telegram-app-48.png"
 import Linkedin from "../../assets/icons8-linkedin-48.png"
 import Insta from "../../assets/icons8-instagram-48.png"
