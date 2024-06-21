@@ -1,5 +1,5 @@
-import ScrollToTop from "../../Components/ScrollToTop";
-import ToggleButton from "../../Components/ToggleButton";
+import ScrollToTop from "../../components/ScrollToTop";
+import ToggleButton from "../../components/ToggleButton";
 
 const Header = () => {
     return (
