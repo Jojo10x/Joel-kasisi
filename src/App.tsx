@@ -10,6 +10,7 @@ import RotatingText from './RotatingText';
 import ToggleButton from './ToggleButton';
 import ShootingStarAnimation from './ShootingStarAnimation';
 import ScrollToTop from './ScrollToTop';
+import CurrentProjects from './Sections/CurrentProjects/CurrentProjects';
 
 
 const App: React.FC = () => {
@@ -250,6 +251,8 @@ const App: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <CurrentProjects/>
 
       <section id="projects">
         <div className="projects container">
