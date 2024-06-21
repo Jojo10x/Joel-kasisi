@@ -1,6 +1,6 @@
 import { FC} from 'react';
-import stylees from './style.module.css';
-import GitHUb from './assets/github-mark.svg'
+import stylees from '../style.module.css';
+import GitHUb from '../assets/github-mark.svg'
 
 
 interface RotatingTextProps {
