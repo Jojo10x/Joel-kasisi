@@ -1,5 +1,6 @@
 import NodeJS from "../../assets/node-js-2.png"
 import GitLogo from "../../assets/icons8-git-48.png"
+import Native from "../../assets/native.png"
 
 const Services = () => {
     return (
@@ -59,6 +60,14 @@ const Services = () => {
                 React is a JavaScript library developed by Facebook. Its aim is
                 to allow developers to easily create fast user interfaces for
                 websites and applications alike.
+              </p>
+            </div>
+            <div className="service-item logo hidden">
+              <div className="icon">
+                <img src="https://img.icons8.com/?size=100&id=35989&format=png&color=000000" />
+              </div>
+              <p>
+              React Native is an open-source UI software framework used to develop applications for Android and iOS using the React framework.
               </p>
             </div>
             <div className="service-item logo hidden">
