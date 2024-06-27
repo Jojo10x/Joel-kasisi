@@ -7,6 +7,12 @@ import Footer from './Sections/Footer/Footer';
 import Services from './Sections/ServiceSection/Services';
 import Hero from './Sections/Hero/Hero';
 import Header from './Sections/Header/Header';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
+import Portfolio from './Pages/Portfolio';
 
 
 const App: React.FC = () => {
@@ -73,17 +79,26 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <Header />
-      <Hero />
-      <Services />
-      <Projects />
-      <About />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+      </Routes>
+    </Router>
   );
 };
+
+const Home = () => (
+  <>
+    <Header />
+    <Hero />
+    <Services />
+    <Projects />
+    <About />
+    <Contact />
+    <Footer />
+  </>
+);
 
 export default App;
 
