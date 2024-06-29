@@ -1,15 +1,4 @@
 .portfolio-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-
-    .section-title {
-        flex-grow: 1;
-        text-align: center;
-        margin: 0;
-    }
-
     .cta {
         margin: 10px;
         flex-shrink: 0;
@@ -25,8 +14,10 @@
     height: auto;
   }
   
-//   .section-block{
-//     display: flex;
-//     gap: 10px;
-//     flex-direction: column;
-//   }
+  .section-block{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+  }
+

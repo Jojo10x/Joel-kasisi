@@ -20,6 +20,7 @@ const SectionBtn = ({ heading,text, url }: SectionProps) => {
 
   return (
     <>
+    <div className="">
       <a
         className="cta"
         onMouseEnter={handleMouseEnter}
@@ -30,6 +31,7 @@ const SectionBtn = ({ heading,text, url }: SectionProps) => {
         {heading}
       </a>
       {isHovered && <p>{text}</p>}
+      </div>
     </>
   );
 };
