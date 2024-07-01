@@ -21,13 +21,15 @@ interface SectionProps {
         title="Beauty Time"
         width="104%"
         height="100%"
-        style={{ border: 'none' }}
+        style={{ border: 'none' ,
+        transform: 'scale(0.9615)',
+        transformOrigin: '0 0' }}
       />
     </DeviceFrameset>
   );
   
   const IPhoneXFrame = ({ url }:DeviceProps) => (
-    <DeviceFrameset device="iPhone X">
+    <DeviceFrameset device="iPhone 5s" color="black">
       <iframe
         src={url}
         title="Beauty Time"
