@@ -1,4 +1,10 @@
+import { useNavigate } from "react-router";
+
 const Hero = () => {
+  const navigate = useNavigate();
+  const goToPortfolio = () => {
+    navigate("/portfolio");
+  };
     return (
         <section id="hero">
         <div className="hero container">
@@ -12,9 +18,10 @@ const Hero = () => {
             <h1>
               Joel Kasisi <span></span>
             </h1>
-            <a href="#projects" type="button" className="cta">
+            {/* <a onClick={goToPortfolio}  type="button" className="cta">
               Portfolio
-            </a>
+            </a> */}
+            <button onClick={goToPortfolio} className="cta">Portfolio</button>
           </div>
         </div>
       </section>

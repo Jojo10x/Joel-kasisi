@@ -1,0 +1,23 @@
+.portfolio-header {
+    .cta {
+        margin: 10px;
+        flex-shrink: 0;
+    }
+}
+.marvel-device {
+    display: block;
+    margin: 3em auto;
+  }
+  
+  .marvel-device img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .section-block{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+  }
+

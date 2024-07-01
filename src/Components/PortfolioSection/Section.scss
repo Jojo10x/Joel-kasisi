@@ -1,0 +1,33 @@
+.device-frame > div {
+    display: none;
+  }
+  
+  @media (min-width: 1024px) {
+    .desktop-only {
+      display: block !important;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .tablet-only {
+      display: block !important;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .mobile-only {
+      display: block !important;
+      .screen{
+        padding-top: 30px;
+      }
+    }
+  }
+  
+  .marvel-device.iphone5s {
+    padding: 105px 22px;
+    background: #2c2b2c;
+    width: 320px;
+    height: 568px;
+    border-radius: 50px;
+    width: fit-content !important;
+}

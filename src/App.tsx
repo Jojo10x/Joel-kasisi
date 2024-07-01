@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css'
 import Projects from './Sections/Projects/Projects';
 import About from './Sections/About/About';
@@ -7,9 +7,17 @@ import Footer from './Sections/Footer/Footer';
 import Services from './Sections/ServiceSection/Services';
 import Hero from './Sections/Hero/Hero';
 import Header from './Sections/Header/Header';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
+import Portfolio from './Pages/Portfolio';
 
 
 const App: React.FC = () => {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
   useEffect(() => {
     const dateElement = document.getElementById("date");
     if (dateElement) {
@@ -35,18 +43,22 @@ const App: React.FC = () => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const headerElement = header as HTMLDivElement | null;
+
       if (headerElement) {
         headerElement.style.backgroundColor =
           scrollPosition > 550 ? "#29323c" : "transparent";
       }
+
+      setPrevScrollPos(scrollPosition);
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        const scrollDown = window.scrollY > prevScrollPos;
+
+        if (entry.isIntersecting && scrollDown) {
           entry.target.classList.add("show");
-        } else {
-          entry.target.classList.remove("show");
+          observer.unobserve(entry.target); 
         }
       });
     });
@@ -70,20 +82,30 @@ const App: React.FC = () => {
         item.removeEventListener("click", handleHamburgerClick);
       });
     };
-  }, []);
+  }, [prevScrollPos]);
+
 
   return (
-    <div>
-      <Header />
-      <Hero />
-      <Services />
-      <Projects />
-      <About />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+      </Routes>
+    </Router>
   );
 };
+
+const Home = () => (
+  <>
+    <Header />
+    <Hero />
+    <Services />
+    <Projects />
+    <About />
+    <Contact />
+    <Footer />
+  </>
+);
 
 export default App;
 
