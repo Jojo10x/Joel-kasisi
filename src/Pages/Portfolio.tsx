@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router";
 import "./portfolio.scss";
-import Section from "../components/PortfolioSection/Section";
-import SectionBtn from "../components/PortfolioSection/SectionBtn";
-import Footer from "../Sections/Footer/Footer";
-import ScrollToTop from "../components/ScrollToTop";
+import Section from "components/PortfolioSection/Section";
+import SectionBtn from "components/PortfolioSection/SectionBtn";
+import Footer from "Sections/Footer/Footer";
+import ScrollToTop from "components/ScrollToTop";
 
 const Portfolio = () => {
    const navigate = useNavigate();
