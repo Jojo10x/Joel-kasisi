@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router";
 import "./portfolio.scss";
-import 'react-device-frameset/styles/marvel-devices.min.css'
 import Section from "../components/PortfolioSection/Section";
 import SectionBtn from "../components/PortfolioSection/SectionBtn";
 import Footer from "../Sections/Footer/Footer";
