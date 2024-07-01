@@ -1,6 +1,5 @@
 import NodeJS from "../../assets/node-js-2.png"
 import GitLogo from "../../assets/icons8-git-48.png"
-import Native from "../../assets/native.png"
 
 const Services = () => {
     return (
