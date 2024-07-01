@@ -1,9 +1,10 @@
 import { useNavigate } from "react-router";
 import "./portfolio.scss";
-import Section from '../components/PortfolioSection/Section'; 
-import SectionBtn from '../components/PortfolioSection/SectionBtn';
+import 'react-device-frameset/styles/marvel-devices.min.css'
+import Section from '../Components/PortfolioSection/Section'; 
+import SectionBtn from '../Components/PortfolioSection/SectionBtn';
 import Footer from '../Sections/Footer/Footer'; 
-import ScrollToTop from '../components/ScrollToTop';
+import ScrollToTop from '../Components/ScrollToTop';
 
 const Portfolio = () => {
    const navigate = useNavigate();

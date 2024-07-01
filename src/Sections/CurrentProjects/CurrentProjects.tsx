@@ -1,4 +1,4 @@
-import WebsitePreview from "../../components/WebsitePreview";
+import WebsitePreview from "../../Components/WebsitePreview";
 
   const CurrentProjects = () => {
     return (

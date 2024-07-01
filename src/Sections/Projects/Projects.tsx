@@ -1,4 +1,4 @@
-import RotatingText from "../../components/RotatingText";
+import RotatingText from "../../Components/RotatingText";
 
 const Projects = () => {
   return (
