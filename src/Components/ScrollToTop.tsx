@@ -1,69 +1,74 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import styles from '../Components/ScrollToTop.module.scss';
+interface ScrollToTopProps {
+  size?: number;
+  color?: string;
+  hoverColor?: string;
+}
 
-const ScrollToTop: React.FC = () => {
-    const updateProgressCircle = () => {
-        const progressElement = document.querySelector('.progress-circle-bar') as HTMLElement;
-        const scrollToTopElement = document.querySelector('.scroll-to-top') as HTMLElement;
-        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-        let progress = (window.scrollY / totalHeight) * 283;
-        progress = Math.min(progress, 283);
-        progressElement.style.strokeDashoffset = `${283 - progress}`;
-    
-        if (window.innerHeight + window.scrollY >= totalHeight) { 
-          scrollToTopElement.style.opacity = '1';
-        } else {
-          scrollToTopElement.style.opacity = '0';
-        }
+const ScrollToTop: React.FC<ScrollToTopProps> = ({
+  size = 46,
+  color = 'white',
+  hoverColor = '#F13E51',
+}) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollProgress = scrollTop / scrollHeight;
+
+      setProgress(scrollProgress);
+      setIsVisible(scrollTop > 50);
     };
 
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-    useEffect(() => {
-        const scrollToTopElement = document.querySelector('.scroll-to-top') as HTMLElement;
-        scrollToTopElement.addEventListener('click', scrollToTop);
-        updateProgressCircle();
-        window.addEventListener('scroll', updateProgressCircle);
-        window.addEventListener('resize', updateProgressCircle);
-        return () => {
-            window.removeEventListener('scroll', updateProgressCircle);
-            window.removeEventListener('resize', updateProgressCircle);
-            scrollToTopElement.removeEventListener('click', scrollToTop);
-        };
-    }, []);
-    
-      return (
-        <div className="progress-circle-container">
-          <svg className="progress-circle" viewBox="0 0 100 100">
-            <circle
-              className="progress-background"
-              cx="50"
-              cy="50"
-              r="45"
-            ></circle>
-            <circle
-              className="progress-circle-bar"
-              cx="50"
-              cy="50"
-              r="45"
-            ></circle>
-          </svg>
-          <div className="scroll-to-top" onClick={scrollToTop}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 48 48"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path className="arrowline" d="M24 42V6M6 24l18-18 18 18" />
-            </svg>
-          </div>
-        </div>
-      );
-    };
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const radius = 49;
+  const circumference = 2 * Math.PI * radius;
+  const validProgress = !isNaN(progress) ? Math.max(0, Math.min(1, progress)) : 0;
+
+  const strokeDashoffset = !isNaN(circumference * (1 - validProgress))
+    ? circumference * (1 - validProgress)
+    : 0;
+
+  return (
+    <div 
+      className={`${styles.progressWrap} ${isVisible ? styles.active : ''}`} 
+      onClick={scrollToTop}
+      style={{
+        height: `${size}px`,
+        width: `${size}px`,
+        boxShadow: `inset 0 0 0 2px ${color}`,
+      }}
+    >
+      <svg
+        className="progress-circle"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path
+          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+          style={{
+            strokeDasharray: circumference,
+            strokeDashoffset,
+            stroke: hoverColor,
+            strokeWidth: 2, 
+            fill: 'none', 
+          }}
+        />
+      </svg>
+    </div>
+  );
+};
 
 export default ScrollToTop;
