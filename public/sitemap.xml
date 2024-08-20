@@ -1,14 +1,37 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://joelkasisi.ru/</loc>
-    <lastmod>2024-08-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://joelkasisi.ru/projects</loc>
-    <lastmod>2024-08-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-</urlset>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Joel Kasisi",
+  "jobTitle": "Web Developer",
+  "url": "https://joelkasisi.ru",
+  "email": "joelkasisi10@gmail.com",
+  "telephone": "+79778553123",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lusaka",
+    "addressCountry": "Zambia"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/JoelKasisi",
+    "https://github.com/Jojo10x",
+    "https://joelkasisi.netlify.app"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Plekhanov Russian University of Economics",
+    "startDate": "2020",
+    "endDate": "2024",
+    "degree": "Bachelor's Degree in Software and Administration of Information Systems"
+  },
+  "knowsAbout": [
+    "Web Development", "React", "TypeScript", "JavaScript", 
+    "Data Visualization", "Responsive Web Design"
+  ],
+  "language": ["English", "Russian"],
+  "worksFor": {
+    "@type": "Organization",
+    <!-- "name": "Web Creator" -->
+  }
+}
+</script>
