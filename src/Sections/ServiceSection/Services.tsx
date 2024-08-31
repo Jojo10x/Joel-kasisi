@@ -1,9 +1,11 @@
 import NodeJS from "../../assets/node-js-2.png"
 import GitLogo from "../../assets/icons8-git-48.png"
+import { useTheme } from "../../contexts/ThemeContext";
 
 const Services = () => {
+  const { isDarkMode } = useTheme();
     return (
-        <section id="services">
+        <section id="services" className={isDarkMode ? 'dark-mode' : 'light-mode'}>
         <div className="services container">
           <div className="service-top">
             <h1 className="section-title hidden right">

@@ -13,6 +13,7 @@ import {
   Route
 } from 'react-router-dom';
 import Portfolio from './Pages/Portfolio';
+import WebGL from './Components/WebGL/WebGL';
 
 
 const App: React.FC = () => {
@@ -84,6 +85,10 @@ const App: React.FC = () => {
     };
   }, [prevScrollPos]);
 
+  document.documentElement.style.setProperty('--scrollbar-thumb-color', '#6200ee');
+document.documentElement.style.setProperty('--scrollbar-track-color', '#e0e0e0');
+
+
 
   return (
     <Router>
@@ -99,11 +104,16 @@ const Home = () => (
   <>
     <Header />
     <Hero />
+    <WebGL>
+   
     <Services />
     <Projects />
     <About />
     <Contact />
+   
+    </WebGL>
     <Footer />
+   
   </>
 );
 

@@ -20,6 +20,7 @@
     "react-router": "^6.23.1",
     "react-router-dom": "^6.23.1",
     "sitemap-generator-cli": "^7.5.0",
+    "webgl-fluid-enhanced": "^0.6.1",
     "webgl-fluid-simulation": "^1.0.0"
   },
   "devDependencies": {

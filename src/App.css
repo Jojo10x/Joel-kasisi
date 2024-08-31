@@ -6,6 +6,33 @@
     box-sizing: border-box;
 }
 
+/* Custom scrollbar styles */
+:root {
+    --scrollbar-thumb-color: #888;
+    --scrollbar-track-color: #f1f1f1;
+  }
+  
+  /* For Webkit browsers (Chrome, Safari, etc.) */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color);
+  }
+  
+  /* For Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+  }
+
+
 html {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -32,7 +59,6 @@ img {
 }
 
 p {
-    color: black;
     font-size: 1.4rem;
     margin-top: 5px;
     line-height: 2.5rem;
@@ -43,7 +69,6 @@ p {
 .section-title {
     font-size: 4rem;
     font-weight: 300;
-    color: black;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
@@ -82,6 +107,8 @@ p {
     margin-top: 30px;
     transition: 0.3s ease;
     transition-property: background-color, color;
+    pointer-events: auto; 
+    cursor: pointer;
 }
 
 .cta:hover {
@@ -489,6 +516,11 @@ z-index: 1;
 
 #projects .project-item:hover .project-img img {
     transform: scale(1.1);
+   
+}
+#projects a{
+    pointer-events: auto; 
+    cursor: pointer;
 }
 
 /* End Projects section */
@@ -561,6 +593,7 @@ height: 100%;
 
 /* End About Section */
 
+
 /* contact Section */
 #contact .contact {
     flex-direction: column;
@@ -568,6 +601,7 @@ height: 100%;
     margin: 0 auto;
     width: 90%;
 }
+
 
 #contact .contact-items {
     /* max-width: 400px; */
@@ -660,18 +694,25 @@ height: 100%;
     margin: 0 5px;
 }
 
+
+
 #footer .social-item img {
-    filter: grayscale(1);
+    filter: grayscale(0);
     transition: 0.3s ease filter;
 }
 
 #footer .social-item:hover img {
-    filter: grayscale(0);
+    filter: grayscale(1);
+    transform: scale(1.2);
 }
 
 #footer p {
-    color: white;
+    filter: grayscale(0);
+    transition: 0.3s ease filter;
     font-size: 1.3rem;
+}
+#footer p:hover {
+    transform: scale(1.2);
 }
 
 /* End Footer */
@@ -989,48 +1030,73 @@ height: 100%;
 }
 
 /* Light Mode */
-body {
+/* body {
   background-color: #ffffff;
   color: #000000;
-}
+} */
+/* 
+Dark Mode */
 
-/* Dark Mode */
-.dark-mode {
+/* .dark-mode {
   background-color: #0a0a0a;
   color: #ffffff;
-}
+} */
 .dark-mode .section-title{
-  color: white !important;
+  color: white ;
 } 
 .dark-mode p{
-  color: white !important;
+  color: white ;
 } 
 .dark-mode a{
-  color: white !important;
+  color: white ;
 } 
+.dark-mode #about a{
+  color: white !important ;
+}
 
 .dark-mode .col-left .about-img {
   
-  border: 1px solid rgb(255, 255, 255)  !important;
-  box-shadow: 0px 0px 18px 0 #ffffff2c !important;
+  border: 1px solid rgb(255, 255, 255)  ;
+  box-shadow: 0px 0px 18px 0 #ffffff2c ;
 
 }
 .dark-mode .contact-item img {
-  filter: invert(100%) !important;
+  filter: invert(100%) ;
 }
 .dark-mode .contact-item{
-  box-shadow: 0px 0px 18px 0 #7e7d7d2c !important;
-  transition: 0.3s ease box-shadow !important;
+  box-shadow: 0px 0px 18px 0 #7e7d7d2c ;
+  transition: 0.3s ease box-shadow ;
 }
 .dark-mode .contact-item:hover {
-  box-shadow: 0px 0px 5px 0 #7e7d7d2c !important;
+  box-shadow: 0px 0px 5px 0 #7e7d7d2c ;
 }
 .dark-mode #hero{
     filter: grayscale(100%);
 }
 .dark-mode #hero h1{
-   color: white !important;
+   color: white 
 }
+
+.light-mode {
+    color: #000000;
+  
+    .contact-info h1,
+    .contact-info h2 {
+      color: #000000;
+    }
+  }
+  
+  /* Dark mode */
+  .dark-mode {
+    color: #f0f0f0;
+  
+    .contact-info h1,
+    .contact-info h2 {
+      color: #f0f0f0;
+    }
+  }
+
+/* Light mode */
 
 
 /* progress circle */

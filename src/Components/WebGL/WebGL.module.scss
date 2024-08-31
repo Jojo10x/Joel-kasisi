@@ -1,0 +1,42 @@
+
+.canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1; 
+    padding: 20px;
+    color: #ffffff;
+    pointer-events: none; 
+  }
+  
+  .buttonWrapper {
+    position: relative; 
+    top: 20px;
+    left: 20px;
+    z-index: 2; 
+    pointer-events: auto; 
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+//   .dark-mode .canvas {
+//     background-color: #000000; /* Dark mode background color */
+//   }
+  
+//   .light-mode .canvas {
+//     background-color: #ffffff; /* Light mode background color */
+//   }

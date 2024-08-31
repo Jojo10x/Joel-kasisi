@@ -1,8 +1,10 @@
+import { useTheme } from "../../contexts/ThemeContext";
 import RotatingText from "../../Components/RotatingText";
 
 const Projects = () => {
+  const { isDarkMode } = useTheme();
   return (
-    <section id="projects">
+    <section id="projects" className={isDarkMode ? 'dark-mode' : 'light-mode'}>
       <div className="projects container">
         <div className="projects-header">
           <h1 className="section-title hidden">

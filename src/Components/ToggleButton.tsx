@@ -1,23 +1,58 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../App.css'
-
+import webGLFluidEnhanced from 'webgl-fluid-enhanced';
+import { palettes } from '../types/palettes';
+import { useTheme } from '../contexts/ThemeContext';
 interface ToggleButtonProps {
 }
 
 const ToggleButton: React.FC<ToggleButtonProps> = () => {
   const [isOn, setIsOn] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [currentVariant, setCurrentVariant] = useState<'light' | 'dark'>('light');
+  const [currentPaletteIndex, setCurrentPaletteIndex] = useState(0);
+  const { toggleDarkMode } = useTheme();
+
+  useEffect(() => {
+    const storedVariant = localStorage.getItem('variant') || 'light';
+    const storedPaletteIndex = localStorage.getItem('colorPalette') || '0';
+
+    setCurrentVariant(storedVariant as 'light' | 'dark');
+    setCurrentPaletteIndex(parseInt(storedPaletteIndex, 10));
+    updateColors(parseInt(storedPaletteIndex, 10), storedVariant as 'light' | 'dark');
+  }, []);
 
   const handleClick = (): void => {
     setIsOn(!isOn);
     toggleMode();
   };
+
   const toggleMode = () => {
-    setIsDarkMode(!isDarkMode);
-    if (isDarkMode) {
-      document.body.classList.remove('dark-mode');
-    } else {
-      document.body.classList.add('dark-mode');
+    const newVariant = currentVariant === 'light' ? 'dark' : 'light';
+    setCurrentVariant(newVariant);
+    localStorage.setItem('variant', newVariant);
+    updateColors(currentPaletteIndex, newVariant);
+  };
+
+  const updateColors = (paletteIndex: number, variant: 'light' | 'dark') => {
+    const colors = palettes[paletteIndex][variant];
+
+    const root = document.documentElement.style;
+    // root.setProperty('--color-text', colors.textColor);
+    root.setProperty('--color-background', colors.backgroundColor);
+    root.setProperty('--color-primary', colors.primaryColor);
+    root.setProperty('--color-secondary', colors.secondaryColor);
+    root.setProperty('--color-accent', colors.accentColor);
+
+    const canvas = document.querySelector('canvas');
+    if (canvas) {
+      webGLFluidEnhanced.simulation(canvas, {
+        COLOR_PALETTE: [
+          colors.primaryColor,
+          colors.secondaryColor,
+          colors.accentColor,
+        ],
+        BACK_COLOR: colors.backgroundColor,
+      });
     }
   };
 
@@ -47,7 +82,7 @@ const ToggleButton: React.FC<ToggleButtonProps> = () => {
             backgroundColor: getBackgroundColor(),
             animation: isOn ? 'roll 1.5s forwards' : 'rollback 1.5s forwards',
           }}
-          onClick={handleClick}
+          onClick={()=> {handleClick(); toggleDarkMode()}}
         />
       </div>
     </div>
@@ -55,5 +90,3 @@ const ToggleButton: React.FC<ToggleButtonProps> = () => {
 };
 
 export default ToggleButton;
-
-

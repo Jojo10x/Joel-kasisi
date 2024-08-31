@@ -1,6 +1,9 @@
+import { useTheme } from "../../contexts/ThemeContext";
+
 const Contact = () => {
+  const { isDarkMode } = useTheme();
     return (
-        <section id="contact">
+        <section id="contact" className={isDarkMode ? 'dark-mode' : 'light-mode'}>
         <div className="contact container">
           <div>
             <h1 className="section-title hidden right">

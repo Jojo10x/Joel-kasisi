@@ -2,11 +2,13 @@ import ShootingStarAnimation from "../../Components/ShootingStarAnimation";
 import Telegram from "../../assets/icons8-telegram-app-48.png"
 import Linkedin from "../../assets/icons8-linkedin-48.png"
 import Insta from "../../assets/icons8-instagram-48.png"
+import { useTheme } from "../../contexts/ThemeContext";
 
 const Footer = () => {
+  const { isDarkMode } = useTheme();
     return (
-        <footer id="footer">
-        <div className="footer container">
+        <footer id="footer" className={isDarkMode ? 'dark-mode' : 'light-mode'}>
+        <div className="footer container" >
         <ShootingStarAnimation />
           <div className="brand">
             <h1>
@@ -54,7 +56,8 @@ const Footer = () => {
             </div>
           </div>
           <p>
-            &copy; Joel Kasisi <span id="date"></span>
+            <a href="https://pixeltochka.tech/" target="blank">Powered by PT</a>  
+            {/* <span id="date"></span> */}
           </p>
         </div>
       </footer>

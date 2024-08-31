@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import JoMoscow from "../../assets/PXL_20220330_092544474_Original.jpeg"
+import { useTheme } from "../../contexts/ThemeContext";
 
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { isDarkMode } = useTheme();
   useEffect(() => {
     const options = {
       root: null,
@@ -27,7 +29,7 @@ const About = () => {
     };
   }, []);
   return (
-    <section id="about">
+    <section id="about" className={isDarkMode ? 'dark-mode' : 'light-mode'}>
       <div className="about container">
         <div className="col-left">
           <div className={`about-img ${isVisible ? "visible" : ""}`}>
