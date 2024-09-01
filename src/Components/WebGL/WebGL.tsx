@@ -27,6 +27,8 @@ const WebGL: React.FC<FluidProps> = ({ children }) => {
         SPLAT_AMOUNT: 5,
         SPLAT_RADIUS: 0.25,
         SPLAT_FORCE: 6000,
+        COLOR_PALETTE: [
+          ],
         SPLAT_KEY: "Space",
         SHADING: true,
         COLORFUL: true,
