@@ -1,7 +1,5 @@
 User-agent: *
 Disallow: /private/
-Disallow: /tmp/
-Disallow: /404
 Allow: /
 
 Sitemap: https://joelkasisi.ru/sitemap.xml

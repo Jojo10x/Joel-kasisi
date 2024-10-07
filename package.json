@@ -20,11 +20,13 @@
     "react-dom": "^18.3.1",
     "react-router": "^6.23.1",
     "react-router-dom": "^6.23.1",
+    "sitemap": "^8.0.0",
     "sitemap-generator-cli": "^7.5.0",
     "webgl-fluid-enhanced": "^0.6.1",
     "webgl-fluid-simulation": "^1.0.0"
   },
   "devDependencies": {
+    "@types/node": "^22.7.5",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
@@ -35,7 +37,8 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "gh-pages": "^6.1.1",
     "sass": "^1.72.0",
-    "typescript": "^5.2.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2",
     "vite": "^5.1.6"
   }
 }
