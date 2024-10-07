@@ -117,7 +117,7 @@ p {
 }
 
 .brand h1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
     color: white;
 }
@@ -209,8 +209,8 @@ p {
 }
 
 #header .hamburger {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     display: inline-block;
     border: 3px solid red;
     border-radius: 50%;
@@ -642,6 +642,8 @@ height: 100%;
     font-size: 1.3rem;
     line-height: 2rem;
     font-weight: 500;
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 /*End contact Section */
@@ -967,7 +969,7 @@ height: 100%;
 
 /* Spinner */
 
-.toggle-container {
+/* .toggle-container {
   width: 100px;
   height: 45px;
   margin: auto;
@@ -980,18 +982,19 @@ height: 100%;
 .toggle-container:hover{
   transform: scale(1.1);
 }
-
-.toggle-border {
+ */
+/* .toggle-border {
   width: 100px;
   height: 45px;
-  background-color: transparent;
+  background-color: transparent; */
   /* box-shadow: 1px 1px 2px rgb(23, 23, 23) inset, -1px -3px 2px rgb(25, 25, 25) inset; */
-  border-radius: 25px;
+  /* border-radius: 25px;
   margin: auto;
   display: flex;
   transition: background-color 0.5s, box-shadow 0.5s;
-}
+} */
 
+/* 
 .toggle {
   margin: auto;
   margin-left: 5px;
@@ -1009,8 +1012,8 @@ height: 100%;
 {
     cursor: pointer;
  
-}
-@keyframes roll 
+} */
+/* @keyframes roll 
 {
     100%
     {
@@ -1027,7 +1030,7 @@ height: 100%;
     {
         transform: translateX(0px) rotate(0deg);
     }
-}
+} */
 
 /* Light Mode */
 /* body {
