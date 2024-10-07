@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import styles from '../Components/ScrollToTop.module.scss';
+import styles from './ScrollToTop.module.scss';
+
 interface ScrollToTopProps {
   size?: number;
   color?: string;
@@ -20,7 +21,7 @@ const ScrollToTop: React.FC<ScrollToTopProps> = ({
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollProgress = scrollTop / scrollHeight;
 
-      setProgress(scrollProgress);
+      setProgress(Math.round(scrollProgress * 100));
       setIsVisible(scrollTop > 50);
     };
 
@@ -34,10 +35,10 @@ const ScrollToTop: React.FC<ScrollToTopProps> = ({
 
   const radius = 49;
   const circumference = 2 * Math.PI * radius;
-  const validProgress = !isNaN(progress) ? Math.max(0, Math.min(1, progress)) : 0;
+  const validProgress = !isNaN(progress) ? Math.max(0, Math.min(100, progress)) : 0;
 
-  const strokeDashoffset = !isNaN(circumference * (1 - validProgress))
-    ? circumference * (1 - validProgress)
+  const strokeDashoffset = !isNaN(circumference * (1 - validProgress / 100))
+    ? circumference * (1 - validProgress / 100)
     : 0;
 
   return (
@@ -50,6 +51,7 @@ const ScrollToTop: React.FC<ScrollToTopProps> = ({
         boxShadow: `inset 0 0 0 2px ${color}`,
       }}
     >
+      <span className={styles.percentage}>{validProgress}%</span>
       <svg
         className="progress-circle"
         width="100%"
@@ -62,7 +64,7 @@ const ScrollToTop: React.FC<ScrollToTopProps> = ({
             strokeDasharray: circumference,
             strokeDashoffset,
             stroke: hoverColor,
-            strokeWidth: 2, 
+            strokeWidth: 5, 
             fill: 'none', 
           }}
         />
