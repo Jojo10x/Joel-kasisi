@@ -40,13 +40,12 @@ const About = () => {
           <h1 className="section-title right hidden">
             About <span>me</span>
           </h1>
-          <h2 className="right hidden">Front End Developer</h2>
+          <h2 className="right hidden">Software Engineer</h2>
           <p className="right hidden">
-            Frontend Developer. Currently studying Software and Information
-            Sytems at Plekhanov Russian University of Economics.
+          Over 2 years of experience, with a bachelor's degree in Software and Information Systems from Plekhanov Russian University of Economics.
           </p>
           <a
-            href="https://drive.google.com/file/d/16tWdCWKaviuDc52fmwdNTjgcE06KTiJh/view?usp=sharing"
+            href="https://drive.google.com/file/d/1IIoIcVPyDFQj2cr9Bw6W14n5etNDCqmU/view?usp=sharing"
             target="blank"
             className="cta right hidden"
           >

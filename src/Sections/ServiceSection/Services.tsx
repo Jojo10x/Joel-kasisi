@@ -30,7 +30,7 @@ const Services = () => {
               <p>
                 Cascading Style Sheets (CSS) is a style sheet language used for
                 describing the presentation of a document written in a markup
-                language such as HTML
+                language.
               </p>
             </div>
             <div className="service-item logo hidden">
@@ -38,8 +38,7 @@ const Services = () => {
                 <img src="https://img.icons8.com/color/344/javascript--v1.png" />
               </div>
               <p>
-                JavaScript is a programming language that is one of the core
-                technologies of the World Wide Web.It renders in interactive and
+                JavaScript is a programming language used for web development.It renders in interactive and
                 dynamic fashion.
               </p>
             </div>
@@ -49,8 +48,7 @@ const Services = () => {
               </div>
               <p>
                 TypeScript is a syntactic superset of JavaScript. It means that
-                TypeScript adds syntax on top of JavaScript, allowing developers
-                to add types.
+                TypeScript adds syntax on top of JavaScript. It adds a type system.
               </p>
             </div>
             <div className="service-item logo hidden">
@@ -58,7 +56,7 @@ const Services = () => {
                 <img src="https://img.icons8.com/office/344/react.png" />
               </div>
               <p>
-                React is a JavaScript library developed by Facebook. Its aim is
+                React is a JavaScript library. Its aim is
                 to allow developers to easily create fast user interfaces for
                 websites and applications alike.
               </p>
@@ -77,8 +75,7 @@ const Services = () => {
               </div>
               <p>
                 Node.js is a cross-platform, open-source JavaScript runtime
-                environment. Developers use it to write command line tools and
-                for server-side scripting.
+                environment. Developers use it for server-side scripting.
               </p>
             </div>
             <div className="service-item logo hidden">
