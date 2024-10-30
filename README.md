@@ -1,4 +1,5 @@
-https://joelkasisi.netlify.app/
+## https://joelkasisi.netlify.app/
+## https://joelkasisi.ru/
 
 
 # React + TypeScript + Vite
