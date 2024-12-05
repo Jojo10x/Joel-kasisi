@@ -10,11 +10,11 @@ const Footer = () => {
         <footer id="footer" className={isDarkMode ? 'dark-mode' : 'light-mode'}>
         <div className="footer container" >
         <ShootingStarAnimation />
-          <div className="brand">
+          {/* <div className="brand">
             <h1>
               <span>J</span>oel <span>K</span>asisi
             </h1>
-          </div>
+          </div> */}
           <h2></h2>
           <div className="social-icon">
             <div className="social-item">
