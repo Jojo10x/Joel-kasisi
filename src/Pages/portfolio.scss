@@ -4,6 +4,17 @@
         flex-shrink: 0;
     }
 }
+.main-header{
+  display: flex;
+}
+.main-section{
+  display: flex;
+  margin: 0 auto;
+  gap: 30px;
+}
+.port-btn{
+  cursor: pointer;
+}
 .marvel-device {
     display: block;
     margin: 3em auto;
