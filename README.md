@@ -1,34 +1,28 @@
-## https://joelkasisi.netlify.app/
 ## https://joelkasisi.ru/
 
+## HOME 
+<img width="1352" alt="Screenshot 2024-12-14 at 7 29 21 PM" src="https://github.com/user-attachments/assets/d2a967b6-555a-4f70-87c3-6b187642cf7a" />
 
-# React + TypeScript + Vite
+## SKILLS
+<img width="1352" alt="Screenshot 2024-12-14 at 7 29 40 PM" src="https://github.com/user-attachments/assets/c3c9e289-0a6b-422e-b11e-6801c0358fe8" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## PROJECT
+<img width="1352" alt="Screenshot 2024-12-14 at 7 29 57 PM" src="https://github.com/user-attachments/assets/fc38f730-645a-4377-9829-60e0226ed3bf" />
 
-Currently, two official plugins are available:
+## ABOUT ME 
+<img width="1352" alt="Screenshot 2024-12-14 at 7 30 13 PM" src="https://github.com/user-attachments/assets/bb951a2d-7d57-461b-b600-7dfa8c674107" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## PORTFOLIO PAGE
+<img width="1352" alt="Screenshot 2024-12-14 at 7 30 51 PM" src="https://github.com/user-attachments/assets/21f8c6cf-b76e-4109-9483-ce2bb97ee0fc" />
+<img width="1352" alt="Screenshot 2024-12-14 at 7 31 00 PM" src="https://github.com/user-attachments/assets/694b9da9-cf8c-4307-b0c8-31305dfbf42f" />
 
-## Expanding the ESLint configuration
+## PERSONAL PROJECTS 
+<img width="1352" alt="Screenshot 2024-12-14 at 7 31 10 PM" src="https://github.com/user-attachments/assets/68d739dc-ad2d-4a7c-817a-c533499c69d3" />
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## INTERVIEW TESTS
+<img width="1352" alt="Screenshot 2024-12-14 at 7 31 22 PM" src="https://github.com/user-attachments/assets/1e79d8d0-4a89-487f-bf7c-b4a4a8398c1d" />
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
