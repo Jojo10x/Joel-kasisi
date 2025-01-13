@@ -14,6 +14,7 @@ import {
 } from 'react-router-dom';
 import Portfolio from './Pages/Portfolio';
 import WebGL from './Components/WebGL/WebGL';
+import TextCarousel from './Sections/TextCarousel/TextCarousel';
 
 
 const App: React.FC = () => {
@@ -107,6 +108,7 @@ const Home = () => (
     <WebGL>
    
     <Services />
+    <TextCarousel/>
     <Projects />
     <About />
     <Contact />

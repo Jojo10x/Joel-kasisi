@@ -1201,3 +1201,126 @@ Dark Mode */
   
   
   
+
+
+/* TextCarousel.css */
+
+.carousel-section {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    width: 100%;
+    padding: 40px 0;
+  }
+  
+  
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 80px;
+  }
+  
+  .carousel-track {
+    position: absolute;
+    display: flex;
+    gap: 60px;
+    padding: 20px 0;
+    transform: translateX(0);
+    will-change: transform;
+  }
+  
+  .animate-carousel {
+    animation: carouselMove 60s linear infinite;
+  }
+  
+  .carousel-track:hover {
+    animation-play-state: paused;
+  }
+  
+  .course-card {
+    flex: 0 0 auto;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .card-content {
+    white-space: nowrap;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-content h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    transition: transform 0.3s ease;
+    color: var(--text-color);
+    opacity: 0.8;
+  }
+  
+  .course-card:hover .card-content {
+    transform: translateY(-2px);
+  }
+  
+  .course-card:hover h3 {
+    opacity: 1;
+  }
+  
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  .gradient-overlay.left {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-color) 0%, transparent 100%);
+  }
+  
+  .gradient-overlay.right {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-color) 0%, transparent 100%);
+  }
+  
+  @keyframes carouselMove {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% / 3));
+    }
+  }
+  
+
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+  
+    .carousel-wrapper {
+      height: 60px;
+    }
+  
+    .course-card {
+      height: 30px;
+    }
+  
+    .card-content h3 {
+      font-size: 16px;
+    }
+  }
