@@ -33,7 +33,7 @@ const About = () => {
       <div className="about container">
         <div className="col-left">
           <div className={`about-img ${isVisible ? "visible" : ""}`}>
-            <img src={JoMoscow} alt="img" />
+            <img src={JoMoscow} alt="Joel Kasisi Picture" />
           </div>
         </div>
         <div className="col-right">

@@ -15,7 +15,7 @@ const Services = () => {
           <div className="service-bottom ">
             <div className="service-item special-need logo hidden">
               <div className="icon">
-                <img src="https://img.icons8.com/color/344/html-5--v1.png" />
+                <img src="https://img.icons8.com/color/344/html-5--v1.png" alt="HTML" />
               </div>
               <p>
                 The HyperText Markup Language or HTML is the standard markup
@@ -25,7 +25,7 @@ const Services = () => {
             </div>
             <div className="service-item logo hidden">
               <div className="icon">
-                <img src="https://img.icons8.com/color/344/css3.png" />
+                <img src="https://img.icons8.com/color/344/css3.png" alt="CSS" />
               </div>
               <p>
                 Cascading Style Sheets (CSS) is a style sheet language used for
@@ -35,7 +35,7 @@ const Services = () => {
             </div>
             <div className="service-item logo hidden">
               <div className="icon">
-                <img src="https://img.icons8.com/color/344/javascript--v1.png" />
+                <img src="https://img.icons8.com/color/344/javascript--v1.png" alt="JavaScript" />
               </div>
               <p>
                 JavaScript is a programming language used for web development.It renders in interactive and
@@ -44,7 +44,7 @@ const Services = () => {
             </div>
             <div className="service-item logo hidden">
               <div className="icon">
-                <img src="https://img.icons8.com/fluency/512/typescript--v1.png" />
+                <img src="https://img.icons8.com/fluency/512/typescript--v1.png" alt="TypeScript" />
               </div>
               <p>
                 TypeScript is a syntactic superset of JavaScript. It means that
@@ -53,7 +53,7 @@ const Services = () => {
             </div>
             <div className="service-item logo hidden">
               <div className="icon">
-                <img src="https://img.icons8.com/office/344/react.png" />
+                <img src="https://img.icons8.com/office/344/react.png" alt="React" />
               </div>
               <p>
                 React is a JavaScript library. Its aim is
@@ -63,7 +63,7 @@ const Services = () => {
             </div>
             <div className="service-item logo hidden">
               <div className="icon">
-                <img src="https://img.icons8.com/?size=100&id=35989&format=png&color=000000" />
+                <img src="https://img.icons8.com/?size=100&id=35989&format=png&color=000000" alt="React Native" />
               </div>
               <p>
               React Native is an open-source UI software framework used to develop applications for Android and iOS using the React framework.
@@ -71,7 +71,7 @@ const Services = () => {
             </div>
             <div className="service-item logo hidden">
               <div className="icon">
-                <img src={NodeJS} />
+                <img src={NodeJS} alt="Node.js" />
               </div>
               <p>
                 Node.js is a cross-platform, open-source JavaScript runtime
@@ -80,7 +80,7 @@ const Services = () => {
             </div>
             <div className="service-item logo hidden">
               <div className="icon">
-                <img src={GitLogo} />
+                <img src={GitLogo} alt="Git" />
               </div>
               <p>
                 Git is a distributed version control system.Its goals include

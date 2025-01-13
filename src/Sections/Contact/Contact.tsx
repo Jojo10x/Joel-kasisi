@@ -14,7 +14,7 @@ const Contact = () => {
             <div className="logo hidden">
               <div className="contact-item logo hidden">
                 <div className="icon">
-                  <img src="https://img.icons8.com/ios-filled/344/apple-phone.png" />
+                  <img src="https://img.icons8.com/ios-filled/344/apple-phone.png" alt="Phone" />
                 </div>
                 <div className="contact-info">
                   <h1>Phone</h1>
@@ -25,7 +25,7 @@ const Contact = () => {
             <div className="logo hidden">
               <div className="contact-item logo hidden">
                 <div className="icon">
-                  <img src="https://img.icons8.com/ios-filled/344/new-post.png" />
+                  <img src="https://img.icons8.com/ios-filled/344/new-post.png"  alt="Email"/>
                 </div>
                 <div className="contact-info">
                   <h1>Email</h1>
@@ -38,7 +38,7 @@ const Contact = () => {
             <div className="logo hidden">
               <div className="contact-item logo hidden">
                 <div className="icon">
-                  <img src="https://img.icons8.com/?size=100&id=16733&format=png&color=000000" />
+                  <img src="https://img.icons8.com/?size=100&id=16733&format=png&color=000000" alt="Whatsapp" />
                 </div>
                 <div className="contact-info">
                   <h1>Whatsapp</h1>
