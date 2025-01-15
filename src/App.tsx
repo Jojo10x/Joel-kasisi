@@ -86,7 +86,7 @@ const App: React.FC = () => {
     };
   }, [prevScrollPos]);
 
-  document.documentElement.style.setProperty('--scrollbar-thumb-color', '#6200ee');
+document.documentElement.style.setProperty('--scrollbar-thumb-color', '#dc143c');
 document.documentElement.style.setProperty('--scrollbar-track-color', '#e0e0e0');
 
 
