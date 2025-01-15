@@ -66,9 +66,9 @@ const TextCarousel = () => {
       className={`carousel-section ${isDarkMode ? "dark-mode" : "light-mode"}`}
     >
       <div className="carousel-container">
-        <h2 className="section-title">
+        <h3 className="section-title">
           Courses & <span>Certifications</span>
-        </h2>
+        </h3>
         <div className="carousel-wrapper" ref={carouselRef}>
           <div className="gradient-overlay left"></div>
           <div className="carousel-track" ref={trackRef}>

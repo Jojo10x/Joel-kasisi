@@ -20,13 +20,13 @@ const Services = () => {
                 alt="HTML"
               />
             </div>
-            <p>HyperText Markup Language HTML</p>
+            <p>HTML</p>
           </div>
           <div className="service-item logo hidden">
             <div className="icon">
               <img src="https://img.icons8.com/color/344/css3.png" alt="CSS" />
             </div>
-            <p>Cascading Style Sheets (CSS)</p>
+            <p>CSS</p>
           </div>
           <div className="service-item logo hidden">
             <div className="icon">
@@ -49,15 +49,6 @@ const Services = () => {
           <div className="service-item logo hidden">
             <div className="icon">
               <img
-                src="https://img.icons8.com/office/344/react.png"
-                alt="React"
-              />
-            </div>
-            <p>React</p>
-          </div>
-          <div className="service-item logo hidden">
-            <div className="icon">
-              <img
                 src={
                   isDarkMode
                     ? "https://img.icons8.com/?size=100&id=N3G7bBnphi53&format=png&color=000000"
@@ -67,6 +58,15 @@ const Services = () => {
               />
             </div>
             <p>React Native</p>
+          </div>
+          <div className="service-item logo hidden">
+            <div className="icon">
+              <img
+                src="https://img.icons8.com/office/344/react.png"
+                alt="React"
+              />
+            </div>
+            <p>React</p>
           </div>
           <div className="service-item logo hidden">
             <div className="icon">
