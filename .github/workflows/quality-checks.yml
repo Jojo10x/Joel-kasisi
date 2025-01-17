@@ -27,9 +27,6 @@ jobs:
     
     - name: Type Check & Build
       run: yarn build
-    
-    - name: Preview Build
-      run: yarn preview -- --port 4173
 
     - name: Cache dist
       uses: actions/cache@v3
