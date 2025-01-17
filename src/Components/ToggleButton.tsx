@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import webGLFluidEnhanced from 'webgl-fluid-enhanced';
 import { palettes } from '../types/palettes';
-import { useTheme } from '../contexts/ThemeContext';
+import { useTheme } from '../contexts/useTheme';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 interface ToggleButtonProps {
 }

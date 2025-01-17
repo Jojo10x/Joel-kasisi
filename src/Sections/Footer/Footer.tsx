@@ -2,7 +2,7 @@ import ShootingStarAnimation from "../../Components/ShootingStarAnimation";
 import Telegram from "../../assets/icons8-telegram-app-48.png"
 import Linkedin from "../../assets/icons8-linkedin-48.png"
 import Insta from "../../assets/icons8-instagram-48.png"
-import { useTheme } from "../../contexts/ThemeContext";
+import { useTheme } from "../../contexts/useTheme";
 
 const Footer = () => {
   const { isDarkMode } = useTheme();

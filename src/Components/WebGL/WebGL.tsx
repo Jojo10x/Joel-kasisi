@@ -1,7 +1,14 @@
 import React, { useRef, useEffect, useState } from "react";
 import webGLFluidEnhanced from "webgl-fluid-enhanced";
 import styles from "./WebGL.module.scss";
-import { useTheme } from "../../contexts/ThemeContext";
+import { useTheme } from "../../contexts/useTheme";
+import { FluidSimConfig } from "types/fluidSim";
+interface FluidSimulation {
+  onMouseMove: (x: number, y: number) => void;
+  onMouseDown: () => void;
+  onMouseUp: () => void;
+}
+
 type FluidProps = {
   children: React.ReactNode;
 };
@@ -9,12 +16,12 @@ type FluidProps = {
 const WebGL: React.FC<FluidProps> = ({ children }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [simulation, setSimulation] = useState<any>(null);
+  const [simulation, setSimulation] = useState<FluidSimulation | null>(null);
   const { isDarkMode } = useTheme();
 
   useEffect(() => {
     if (canvasRef.current) {
-      const sim = webGLFluidEnhanced.simulation(canvasRef.current, {
+      const config: FluidSimConfig = {
         SIM_RESOLUTION: 128,
         DYE_RESOLUTION: 1024,
         CAPTURE_RESOLUTION: 512,
@@ -27,8 +34,7 @@ const WebGL: React.FC<FluidProps> = ({ children }) => {
         SPLAT_AMOUNT: 5,
         SPLAT_RADIUS: 0.25,
         SPLAT_FORCE: 6000,
-        COLOR_PALETTE: [
-          ],
+        COLOR_PALETTE: [],
         SPLAT_KEY: "Space",
         SHADING: true,
         COLORFUL: true,
@@ -46,7 +52,9 @@ const WebGL: React.FC<FluidProps> = ({ children }) => {
         SUNRAYS: true,
         SUNRAYS_RESOLUTION: 196,
         SUNRAYS_WEIGHT: 1.0,
-      });
+      };
+
+      const sim = webGLFluidEnhanced.simulation(canvasRef.current, config) as unknown as FluidSimulation;
       setSimulation(sim);
     }
   }, [isDarkMode]);
@@ -54,7 +62,7 @@ const WebGL: React.FC<FluidProps> = ({ children }) => {
   useEffect(() => {
     if (simulation && canvasRef.current) {
       const canvas = canvasRef.current;
-
+      
       const handleMouseMove = (e: MouseEvent | TouchEvent) => {
         if (e instanceof MouseEvent) {
           const rect = canvas.getBoundingClientRect();

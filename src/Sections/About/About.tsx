@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import JoMoscow from "../../assets/PXL_20220330_092544474_Original.jpeg"
-import { useTheme } from "../../contexts/ThemeContext";
+import { useTheme } from "../../contexts/useTheme";
 
 
 const About = () => {

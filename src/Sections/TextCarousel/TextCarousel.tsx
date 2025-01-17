@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useTheme } from "../../contexts/ThemeContext";
+import { useTheme } from "../../contexts/useTheme";
 
 interface Course {
   id: number;
@@ -31,13 +31,14 @@ const TextCarousel = () => {
       }
     );
 
-    if (carouselRef.current) {
-      observer.observe(carouselRef.current);
+    const carouselElement = carouselRef.current;
+    if (carouselElement) {
+      observer.observe(carouselElement);
     }
 
     return () => {
-      if (carouselRef.current) {
-        observer.unobserve(carouselRef.current);
+      if (carouselElement) {
+        observer.unobserve(carouselElement);
       }
     };
   }, []);

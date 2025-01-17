@@ -1,6 +1,6 @@
 import NodeJS from "../../assets/node-js-2.png";
 import Next from "../../assets/next.svg";
-import { useTheme } from "../../contexts/ThemeContext";
+import { useTheme } from "../../contexts/useTheme";
 
 const Services = () => {
   const { isDarkMode } = useTheme();
