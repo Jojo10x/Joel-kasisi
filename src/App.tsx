@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import './App.css'
-import Projects from './Sections/Projects/Projects';
-import About from './Sections/About/About';
-import Contact from './Sections/Contact/Contact';
-import Footer from './Sections/Footer/Footer';
-import Services from './Sections/ServiceSection/Services';
-import Hero from './Sections/Hero/Hero';
-import Header from './Sections/Header/Header';
+import React, { useEffect, useState,lazy } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route
 } from 'react-router-dom';
+import './App.css'
+import Projects from './Sections/Projects/Projects';
+const About = lazy(() => import('./Sections/About/About'));
+const Contact = lazy(() => import('./Sections/Contact/Contact'));
+const Footer = lazy(() => import('./Sections/Footer/Footer'));
+import Services from './Sections/ServiceSection/Services';
+import Hero from './Sections/Hero/Hero';
+import Header from './Sections/Header/Header';
 import Portfolio from './Pages/Portfolio';
 import WebGL from './Components/WebGL/WebGL';
 import TextCarousel from './Sections/TextCarousel/TextCarousel';
