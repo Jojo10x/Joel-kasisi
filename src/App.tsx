@@ -1,21 +1,17 @@
-import React, { useEffect, useState,lazy } from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from 'react-router-dom';
-import './App.css'
-import Projects from './Sections/Projects/Projects';
-const About = lazy(() => import('./Sections/About/About'));
-const Contact = lazy(() => import('./Sections/Contact/Contact'));
-const Footer = lazy(() => import('./Sections/Footer/Footer'));
-import Services from './Sections/ServiceSection/Services';
-import Hero from './Sections/Hero/Hero';
-import Header from './Sections/Header/Header';
-import Portfolio from './Pages/Portfolio';
-import WebGL from './Components/WebGL/WebGL';
-import TextCarousel from './Sections/TextCarousel/TextCarousel';
-
+import React, { useEffect, useState, lazy, Suspense } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Projects from "./Sections/Projects/Projects";
+const About = lazy(() => import("./Sections/About/About"));
+const Contact = lazy(() => import("./Sections/Contact/Contact"));
+const Footer = lazy(() => import("./Sections/Footer/Footer"));
+import Services from "./Sections/ServiceSection/Services";
+import Hero from "./Sections/Hero/Hero";
+import Header from "./Sections/Header/Header";
+import Portfolio from "./Pages/Portfolio";
+import WebGL from "./Components/WebGL/WebGL";
+import TextCarousel from "./Sections/TextCarousel/TextCarousel";
+import Loader from "Components/Loader/Loader";
 
 const App: React.FC = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -60,7 +56,7 @@ const App: React.FC = () => {
 
         if (entry.isIntersecting && scrollDown) {
           entry.target.classList.add("show");
-          observer.unobserve(entry.target); 
+          observer.unobserve(entry.target);
         }
       });
     });
@@ -86,10 +82,14 @@ const App: React.FC = () => {
     };
   }, [prevScrollPos]);
 
-document.documentElement.style.setProperty('--scrollbar-thumb-color', '#dc143c');
-document.documentElement.style.setProperty('--scrollbar-track-color', '#e0e0e0');
-
-
+  document.documentElement.style.setProperty(
+    "--scrollbar-thumb-color",
+    "#dc143c"
+  );
+  document.documentElement.style.setProperty(
+    "--scrollbar-track-color",
+    "#e0e0e0"
+  );
 
   return (
     <Router>
@@ -103,21 +103,19 @@ document.documentElement.style.setProperty('--scrollbar-track-color', '#e0e0e0')
 
 const Home = () => (
   <>
-    <Header />
-    <Hero />
-    <WebGL>
-   
-    <Services />
-    <TextCarousel/>
-    <Projects />
-    <About />
-    <Contact />
-   
-    </WebGL>
-    <Footer />
-   
+    <Suspense fallback={<Loader />}>
+      <Header />
+      <Hero />
+      <WebGL>
+        <Services />
+        <TextCarousel />
+        <Projects />
+        <About />
+        <Contact />
+      </WebGL>
+      <Footer />
+    </Suspense>
   </>
 );
 
 export default App;
-
