@@ -11,7 +11,7 @@ import Header from "./Sections/Header/Header";
 import Portfolio from "./Pages/Portfolio";
 import WebGL from "./Components/WebGL/WebGL";
 import TextCarousel from "./Sections/TextCarousel/TextCarousel";
-import Loader from "Components/Loader/Loader";
+import Loader from "./Components/Loader/Loader";
 
 const App: React.FC = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
