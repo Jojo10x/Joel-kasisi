@@ -12,10 +12,12 @@
 }
 
 .logo {
-    width: auto; 
-    font-size: 2.5rem;
+    width: auto;
+    font-size: 3.5rem;
     font-weight: 600;
     margin-bottom: 20px;
+    color: crimson !important;
+    text-transform: uppercase;
 }
 
 .line_container {
@@ -30,7 +32,8 @@
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background-color: #000;
+    background-color: rgb(14, 133, 36);
+    ;
     animation: expand 2s infinite;
 }
 
@@ -38,9 +41,11 @@
     0% {
         width: 0;
     }
+
     50% {
         width: 100px;
     }
+
     100% {
         width: 0;
     }
