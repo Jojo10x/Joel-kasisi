@@ -110,6 +110,11 @@ const Portfolio = ({ size = 66, color = "black", hoverColor }: GoHomeProps) => {
               url="perspektiva.vercel.app"
               text="Perspektiva - A web application that is dedicated to improving people's lives through effective habit building and strategic planning."
             />
+            <SectionBtn
+              heading="FutureME"
+              url="https://futuremee.vercel.app/"
+              text="FutureME - A web application that is based on making plans for the future."
+            />
 
             <SectionBtn
               heading="NpNgo"
