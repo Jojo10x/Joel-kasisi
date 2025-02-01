@@ -45,7 +45,7 @@ const About = () => {
           Over 2 years of experience, with a bachelor's degree in Software and Information Systems from Plekhanov Russian University of Economics.
           </p>
           <a
-            href="https://drive.google.com/file/d/1IIoIcVPyDFQj2cr9Bw6W14n5etNDCqmU/view?usp=sharing"
+            href="https://drive.google.com/file/d/1wwBFMY652czfQrLa7n9r3m1HW2db8sYf/view?usp=sharing"
             target="blank"
             className="cta right hidden"
           >
