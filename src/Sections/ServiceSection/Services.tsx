@@ -7,6 +7,7 @@ const Section = () => {
 
   const skillsData = [
     { name: "HTML", icon: "https://img.icons8.com/color/344/html-5--v1.png" },
+    { name: "XML", icon: "https://www.svgrepo.com/show/31053/xml.svg" },
     { name: "CSS", icon: "https://img.icons8.com/color/344/css3.png" },
     {
       name: "JavaScript",
@@ -59,6 +60,14 @@ const Section = () => {
       icon: "https://img.icons8.com/?size=100&id=QBqFNfPPB2Kx&format=png&color=000000",
     },
     {
+      name: "BootStrap",
+      icon: "https://img.icons8.com/?size=100&id=EzPCiQUqWWEa&format=png&color=000000",
+    },
+    {
+      name: "Material Ui",
+      icon: "https://img.icons8.com/?size=100&id=gFw7X5Tbl3ss&format=png&color=000000",
+    },
+    {
       name: "PostgreSQL",
       icon: "https://img.icons8.com/?size=100&id=38561&format=png&color=000000",
     },
@@ -94,6 +103,14 @@ const Section = () => {
     {
       name: "Redux",
       icon: "https://img.icons8.com/?size=100&id=jD-fJzVguBmw&format=png&color=000000",
+    },
+    {
+      name: "Linux",
+      icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1012px-Tux.svg.png?20220320193426",
+    },
+    {
+      name: "odoo",
+      icon: "https://cdn.worldvectorlogo.com/logos/odoo.svg",
     },
   ];
 

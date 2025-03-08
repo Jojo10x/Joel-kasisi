@@ -366,7 +366,7 @@ z-index: 1;
 
 #services .service-bottom {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(10, 1fr);
     gap: 40px;
     max-width: 1200px;
     margin: 50px auto;
