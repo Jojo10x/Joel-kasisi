@@ -9,6 +9,7 @@ import Services from "./Sections/ServiceSection/Services";
 import Hero from "./Sections/Hero/Hero";
 import Header from "./Sections/Header/Header";
 import Portfolio from "./Pages/Portfolio";
+import ProjectsPage from "./Pages/Projects";
 import WebGL from "./Components/WebGL/WebGL";
 import TextCarousel from "./Sections/TextCarousel/TextCarousel";
 import Loader from "./Components/Loader/Loader";
@@ -96,6 +97,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
+         <Route path="/projects" element={<ProjectsPage />} />
       </Routes>
     </Router>
   );
