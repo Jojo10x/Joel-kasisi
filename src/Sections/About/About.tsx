@@ -1,38 +1,48 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import JoMoscow from "../../assets/PXL_20220330_092544474_Original.jpeg"
 import { useTheme } from "../../contexts/useTheme";
 
-
 const About = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
   const { isDarkMode } = useTheme();
+  const imageRef = useRef(null);
+
   useEffect(() => {
+    if (hasAnimated) return;
+
     const options = {
       root: null,
       threshold: 0.5,
+      rootMargin: '0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
-      setIsVisible(entry.isIntersecting);
+      
+      if (entry.isIntersecting && !hasAnimated) {
+        setHasAnimated(true);
+        observer.disconnect();
+      }
     }, options);
 
-    const imageElement = document.querySelector(".about-img");
+    const imageElement = imageRef.current;
     if (imageElement) {
       observer.observe(imageElement);
     }
 
     return () => {
-      if (imageElement) {
-        observer.unobserve(imageElement);
-      }
+      observer.disconnect();
     };
-  }, []);
+  }, [hasAnimated]);
+
   return (
     <section id="about" className={isDarkMode ? 'dark-mode' : 'light-mode'}>
       <div className="about container">
         <div className="col-left">
-          <div className={`about-img ${isVisible ? "visible" : ""}`}>
+          <div 
+            ref={imageRef}
+            className={`about-img ${hasAnimated ? "visible" : ""}`}
+          >
             <img src={JoMoscow} alt="Joel Kasisi Picture" />
           </div>
         </div>
