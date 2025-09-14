@@ -18,22 +18,6 @@ const Footer = () => {
           <h2></h2>
           <div className="social-icon">
             <div className="social-item">
-              <a href="https://vk.com/joeyzaaki" target="blank">
-                <img
-                  src="https://img.icons8.com/color/452/vk-circled.png"
-                  alt="VK"
-                />
-              </a>
-            </div>
-            <div className="social-item">
-              <a href="https://www.instagram.com/joeyzak_/" target="blank">
-                <img
-                  src={Insta}
-                  alt="Instagram"
-                />
-              </a>
-            </div>
-            <div className="social-item">
               <a
                 href="https://www.linkedin.com/in/joel-kasisi-008949215/?originalSubdomain=ru"
                 target="blank"
@@ -51,6 +35,22 @@ const Footer = () => {
                 <img
                   src={Telegram}
                   alt="Telegram"
+                />
+              </a>
+            </div>
+                        <div className="social-item">
+              <a href="https://vk.com/joeyzaaki" target="blank">
+                <img
+                  src="https://img.icons8.com/color/452/vk-circled.png"
+                  alt="VK"
+                />
+              </a>
+            </div>
+                        <div className="social-item">
+              <a href="https://www.instagram.com/joeyzak_/" target="blank">
+                <img
+                  src={Insta}
+                  alt="Instagram"
                 />
               </a>
             </div>
