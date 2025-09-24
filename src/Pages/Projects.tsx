@@ -13,24 +13,51 @@ const Projects = () => {
       src: "https://plus.unsplash.com/premium_photo-1682126202084-f23c6cee5dbc?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       header: "BOARD FUSION",
       description: "BoardFusion is a comprehensive board management platform that empowers governance leaders with essential tools, real-time analytics, and secure collaboration features. It streamlines board evaluations, enhances governance oversight, and simplifies the management of meetings, documents, and agendas. With BoardFusion, boards can stay informed, make strategic decisions, and manage complex processes with transparency and efficiency, ensuring effective and secure board governance in a fast-evolving business landscape.",
-      status: "COMPLETED",
+      status: "Support Phase",
       url: "https://boardfusion.co.zm/"
     },
     {
       id: 2,
-      src: "your-image-url2.jpg",
-      header: "Project Two",
-      description: "Your second project description here",
-      status: "In Progress",
-      url: "https://project2.com"
+      src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      header: "PIXELTOCHKA",
+      description: "PixelTochka is a digital agency that creates custom websites and AI solutions tailored to your business needs. We combine creativity and technical expertise to deliver scalable, SEO-friendly, and user-focused platforms that drive growth and credibility.",
+      status: "COMPLETED",
+      url: "https://pixeltochka.netlify.app/"
     },
     {
       id: 3,
-      src: "your-image-url3.jpg",
-      header: "Project Three",
-      description: "Your third project description here",
-      status: "Support Phase",
-      url: "https://project3.com"
+      src: "https://images.unsplash.com/photo-1518976024611-28bf4b48222e?q=80&w=770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      header: "Perspektiva",
+      description: "Perspektiva helps you build better habits, plan your life, and achieve your goals. With tools for habit tracking, goal setting, and strategic planning, we empower you to turn small daily actions into meaningful, lasting change.",
+      status: "COMPLETED",
+      url: "https://perspektiva.vercel.app/"
+    }
+    ,
+    {
+      id: 4,
+      src: "https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?q=80&w=1714&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      header: "FUTUREMEE",
+      description: "FUTUREMEE",
+      status: "COMPLETED",
+      url: "https://futuremee.vercel.app/"
+    }
+    ,
+    {
+      id: 5,
+      src: "https://images.unsplash.com/photo-1727432806019-99527daa45f7?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      header: "STRONGERME",
+      description: "STRONGERME",
+      status: "IN PROGRESS",
+      url: "https://strongerme.vercel.app/"
+    }
+     ,
+    {
+      id: 6,
+      src: "https://images.unsplash.com/photo-1668608322390-46344f213ce9?q=80&w=1666&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      header: "vocalizeiq",
+      description: "vocalizeiq",
+      status: "COMPLETED",
+      url: "https://vocalizeiq.netlify.app/"
     }
   ];
 
