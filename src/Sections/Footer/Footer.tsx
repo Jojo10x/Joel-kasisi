@@ -56,7 +56,7 @@ const Footer = () => {
             </div>
           </div>
           <p>
-            <a href="https://pixeltochka.tech/" target="blank">Powered by PT</a>  
+            <a href="https://pixeltochka.netlify.app/" target="blank">Powered by PT</a>  
             {/* <span id="date"></span> */}
           </p>
         </div>
