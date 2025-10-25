@@ -53,6 +53,8 @@ const About = () => {
           <h2 className="right hidden">Software Engineer</h2>
           <p className="right hidden">
           Over 2 years of experience, with a bachelor's degree in Software and Information Systems from Plekhanov Russian University of Economics.
+          <br />
+           <span className="location-text">Based in Italy. Pursuing a Master’s Degree from The University of Macerata.</span>
           </p>
           <a
             href="https://drive.google.com/file/d/1_iIzymdjeK6YwN6rSINzgYBOctLF07Z7/view?usp=sharing"

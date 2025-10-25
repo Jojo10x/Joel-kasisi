@@ -11,17 +11,17 @@ const Contact = () => {
             </h1>
           </div>
           <div className="contact-items">
-            <div className="logo hidden">
+            {/* <div className="logo hidden">
               <div className="contact-item logo hidden">
                 <div className="icon">
                   <img src="https://img.icons8.com/ios-filled/344/apple-phone.png" alt="Phone" />
                 </div>
                 <div className="contact-info">
                   <h1>Phone</h1>
-                  <h2>+260776100174</h2>
+                  <h2>+39 339 156 4631</h2>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="logo hidden">
               <div className="contact-item logo hidden">
                 <div className="icon">
@@ -42,8 +42,8 @@ const Contact = () => {
                 </div>
                 <div className="contact-info">
                   <h1>Whatsapp</h1>
-                  <a href="https://wa.me/+79778553123">
-                    <h2>+7 (977) 855 3123</h2>{" "}
+                  <a href="https://wa.me/+393391564631">
+                    <h2>+39 (339) 156 4631</h2>{" "}
                   </a>
                 </div>
               </div>
