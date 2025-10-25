@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="social-icon">
             <div className="social-item">
               <a
-                href="https://www.linkedin.com/in/joel-kasisi-008949215/?originalSubdomain=ru"
+                href="https://www.linkedin.com/in/joel-kasisi-008949215/"
                 target="blank"
               >
                 <img
@@ -31,6 +31,7 @@ const Footer = () => {
             <div className="social-item">
               <a
                 href="https://t.me/Joeyzaaki"
+                target="blank"
               >
                 <img
                   src={Telegram}
@@ -47,7 +48,7 @@ const Footer = () => {
               </a>
             </div>
                         <div className="social-item">
-              <a href="https://www.instagram.com/joeyzak_/" target="blank">
+              <a href="https://www.instagram.com/joeyzaaki" target="blank">
                 <img
                   src={Insta}
                   alt="Instagram"
