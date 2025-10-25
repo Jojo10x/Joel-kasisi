@@ -51,7 +51,7 @@ const Portfolio = ({ size = 66, color = "black", hoverColor }: GoHomeProps) => {
       <Section
         text1="Pixel"
         text2=" Tochka"
-        url="https://pixeltochka.tech/"
+        url="https://pixeltochka.netlify.app/"
         paragraph=" PixelTochka is a web development agency dedicated to helping organizations transform a seed of an idea into a powerful digital experience."
       />
       <Section
@@ -69,7 +69,7 @@ const Portfolio = ({ size = 66, color = "black", hoverColor }: GoHomeProps) => {
       <Section
         text1="Korneev"
         text2=" Kicks"
-        url="https://korneevkicks.ru/"
+        url="https://korneev-kicks.netlify.app/"
         paragraph="This is an online store of limited edition sneakers and items under the personal brand of the founder Andrey Korneev."
       />
       <Section
